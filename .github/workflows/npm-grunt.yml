@@ -26,3 +26,9 @@ jobs:
       run: |
         npm install
         npm run prepare
+
+    - name: upload result
+      uses: actions/upload-artifact@v1
+      with:
+        name: my-art
+        path: ${{ github.workspace }}/build
